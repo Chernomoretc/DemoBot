@@ -1,0 +1,13 @@
+meta:
+  environment: jvm
+  toolchain:
+    name: maven
+    version: 8
+build:
+  artifacts:
+    target/*.jar: /
+  args: 'spring-boot:repackage '
+run:
+  jarName: /out/artifacts
+  persistenceMount: /data
+  containerPort: 80
